@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Shikun"
-  avatar           : images/profile.jpg
+  avatar           : "profile.jpg"
   bio              : "Contacts"
   location         : "Vancouver"
   employer         : "University of British Columnbia"
