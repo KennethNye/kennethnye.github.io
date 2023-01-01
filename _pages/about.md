@@ -22,8 +22,8 @@ I also teach mathematics in various levels as a part-time job. If you need tutor
 * **Cambridge-Singapore GCE**
   * [H1 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/8865_y22_sy.pdf)
   * [H2 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9758_y22_sy.pdf)
-  * [H3](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9820_y22_sy.pdf)
-  * [H2 Further Math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9649_y22_sy.pdf)
+  * [H3 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9820_y22_sy.pdf)
+  * [H2 further math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9649_y22_sy.pdf)
 * **Pearson Edexcel Qualifications**
   * [A level math](https://qualifications.pearson.com/content/dam/pdf/A%20Level/Mathematics/2017/specification-and-sample-assesment/a-level-l3-mathematics-specification-issue4.pdf)
   * [AS level math](https://qualifications.pearson.com/content/dam/pdf/A%20Level/Mathematics/2017/specification-and-sample-assesment/as-l3-mathematics-specification.pdf)
@@ -35,13 +35,35 @@ I also teach mathematics in various levels as a part-time job. If you need tutor
 * **Cambridge Pre-U Diploma**
   * [Pre-U math](https://www.cambridgeinternational.org/Images/576697-2023-2024-syllabus.pdf)
   * [Pre-U further math](https://www.cambridgeinternational.org/Images/576699-2023-2024-syllabus.pdf)
-* OCR AS & A level: all math modules
-* AQA AS & A level: all math modules
-* Pre-calculus, AP calculus AB & BC, AP multivariable calclulus, AP statistics
-* ACT, SAT general and subject math
-* MCAT, GRE general and subject math
-* MAT, STEP examinations
-* University math, stats and economics including: calculus, multivariable calculus, linear algebra, abstract algebra, linear regression, introduction to econometrics, microeconomics, macroeconomics, etc.  
+* **OCR Qualification**
+  * [A level math A](https://www.ocr.org.uk/Images/308723-specification-accredited-a-level-gce-mathematics-a-h240.pdf)
+  * [AS level math A](https://www.ocr.org.uk/Images/308720-specification-accredited-as-level-gce-mathematics-a-h230.pdf)
+  * [A level math A further](https://www.ocr.org.uk/Images/308752-specification-accredited-a-level-gce-further-mathematics-a-h245.pdf)
+  * [AS level math A further](https://www.ocr.org.uk/Images/308750-specification-accredited-as-level-gce-further-mathematics-a-h235.pdf)
+* **AQA Qualification**
+  * [A level math](https://filestore.aqa.org.uk/resources/mathematics/specifications/AQA-7357-SP-2017.PDF)
+  * [AS level math](https://filestore.aqa.org.uk/resources/mathematics/specifications/AQA-7356-SP-2017.PDF)
+  * [A level further math](https://filestore.aqa.org.uk/resources/mathematics/specifications/AQA-7367-SP-2017.PDF)
+  * [AS level further math](https://filestore.aqa.org.uk/resources/mathematics/specifications/AQA-7366-SP-2017.PDF)
+* **College Board**
+  * [AP calculus AB & BC](https://apcentral.collegeboard.org/media/pdf/ap-calculus-ab-and-bc-course-and-exam-description.pdf)
+  * [AP statistics](https://apcentral.collegeboard.org/media/pdf/ap-statistics-course-and-exam-description.pdf)
+* **Exams and Admission Test**
+  * [ACT math](https://www.act.org/content/act/en/products-and-services/the-act/test-preparation/math-practice-test-questions.html?page=0&chapter=0)
+  * [SAT math](https://satsuite.collegeboard.org/sat/practice-preparation)
+  * [GRE math](https://www.ets.org/gre/test-takers/general-test/prepare/content/quantitative-reasoning.html)
+  * [GRE subject math](https://www.ets.org/pdfs/gre/practice-book-math.pdf)
+  * [MAT](https://www.maths.ox.ac.uk/system/files/attachments/syllabus_1.pdf)
+  * [STEP](https://www.admissionstesting.org/Images/47831-step-specification-2022.pdf)
+* **University Math, Stats and Economics**
+  * calculus
+  * multivariable calculus
+  * linear algebra
+  * abstract algebra
+  * linear regression
+  * introduction to econometrics
+  * microeconomics
+  * macroeconomics etc.  
 
 
 <!-- This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
