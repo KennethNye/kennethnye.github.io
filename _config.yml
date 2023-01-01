@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Shikun Nie/聂时坤"
+title                    : https://kennethnye.github.io/images/site-logo.png
 title_separator          : "-"
 name                     : &name "Shikun Nie"
 description              : &description "personal description"
@@ -80,14 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Shikun"
+  name             : "Shikun Nie"
   avatar           : "profile.jpg"
-  bio              : "Contacts"
+  bio              : "Faculty of Mathophile, Institute of Mathomania"
   location         : "Vancouver"
-  employer         : "University of British Columnbia"
+  employer         : "University of British Columbia"
   pubmed           : # example "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.ca/citations?hl=en&user=CVJYFYwAAAAJ"
-  email            : "kennethnye@math.ubc.ca"
+  email            : "facultyofmathophile@gmail.com"
   researchgate     : # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

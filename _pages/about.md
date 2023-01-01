@@ -14,7 +14,7 @@ Hellow World! My name is {{site.author.name}}. Currrently I live in {{site.autho
 
 I also teach mathematics in various levels as a part-time job. If you need tutoring, reach me out. For a list of syllabus, see below:
 
-* IB diploma: MYP, study Level, SL, HL either Analysis & approach or Application & interpretations
+* IB diploma: [MYP](https://kennethnye.github.io/files/IBMYPsyllabus.pdf), SL, HL either [Analysis & Approach](https://kennethnye.github.io/files/IBAAsyllabus.pdf) or [Application & Interpretations](https://kennethnye.github.io/files/IBAIsyllabus.pdf)
 * Cambridge-Singapore A Level: H1, H2 and H3 Math and H2 Further Math
 * Edexcel AS & A level: all math modules
 * Cambridge International AS & A level: all math modules
