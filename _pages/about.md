@@ -14,19 +14,27 @@ Hellow World! My name is {{site.author.name}}. Currrently I live in {{site.autho
 
 I also teach mathematics in various levels as a part-time job. If you need tutoring, reach me out. For a list of syllabus, see below:
 
-* **IB diploma**
+* **IB Diploma**
   * [Middle Year Program](https://kennethnye.github.io/files/IBMYPsyllabus.pdf)
   * [Analysis & Approaches SL/HL](https://kennethnye.github.io/files/IBAAsyllabus.pdf)
   * [Application & Interpretations SL/HL](https://kennethnye.github.io/files/IBAIsyllabus.pdf)
   * [Internal Assessment SL/HL](https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_5_matsl_tsm_1205_1_e&part=1&chapter=8)
-* **Cambridge-Singapore A Level** 
-  * [H1 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/8865_y22_sy.pdf
-  * [H2 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9758_y22_sy.pdf
+* **Cambridge-Singapore GCE**
+  * [H1 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/8865_y22_sy.pdf)
+  * [H2 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9758_y22_sy.pdf)
   * [H3](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9820_y22_sy.pdf)
   * [H2 Further Math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9649_y22_sy.pdf)
-* Edexcel AS & A level: all math modules
-* Cambridge International AS & A level: all math modules
-* Cambridge Pre-U diploma: all math modules
+* **Pearson Edexcel Qualifications**
+  * [A level math](https://qualifications.pearson.com/content/dam/pdf/A%20Level/Mathematics/2017/specification-and-sample-assesment/a-level-l3-mathematics-specification-issue4.pdf)
+  * [AS level math](https://qualifications.pearson.com/content/dam/pdf/A%20Level/Mathematics/2017/specification-and-sample-assesment/as-l3-mathematics-specification.pdf)
+  * [A level further math](https://qualifications.pearson.com/content/dam/pdf/A%20Level/Mathematics/2017/specification-and-sample-assesment/a-level-l3-further-mathematics-specification.pdf)
+  * [AS level further math](https://qualifications.pearson.com/content/dam/pdf/A%20Level/Mathematics/2017/specification-and-sample-assesment/as-l3-further-mathematics-specification.pdf)
+* **Cambridge International Education**
+  * [AS and A level math](https://www.cambridgeinternational.org/Images/597421-2023-2025-syllabus.pdf)
+  * [AS and A level math-further](https://www.cambridgeinternational.org/Images/597381-2023-2025-syllabus.pdf)
+* **Cambridge Pre-U Diploma**
+  * [Pre-U math](https://www.cambridgeinternational.org/Images/576697-2023-2024-syllabus.pdf)
+  * [Pre-U further math](https://www.cambridgeinternational.org/Images/576699-2023-2024-syllabus.pdf)
 * OCR AS & A level: all math modules
 * AQA AS & A level: all math modules
 * Pre-calculus, AP calculus AB & BC, AP multivariable calclulus, AP statistics
