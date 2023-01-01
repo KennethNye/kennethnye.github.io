@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Homepage"
+title: "Welcome to My Homepage"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -14,8 +14,16 @@ Hellow World! My name is {{site.author.name}}. Currrently I live in {{site.autho
 
 I also teach mathematics in various levels as a part-time job. If you need tutoring, reach me out. For a list of syllabus, see below:
 
-* IB diploma: [MYP](https://kennethnye.github.io/files/IBMYPsyllabus.pdf), SL, HL either [Analysis & Approach](https://kennethnye.github.io/files/IBAAsyllabus.pdf) or [Application & Interpretations](https://kennethnye.github.io/files/IBAIsyllabus.pdf)
-* Cambridge-Singapore A Level: H1, H2 and H3 Math and H2 Further Math
+* **IB diploma**
+  * [Middle Year Program](https://kennethnye.github.io/files/IBMYPsyllabus.pdf)
+  * [Analysis & Approaches SL/HL](https://kennethnye.github.io/files/IBAAsyllabus.pdf)
+  * [Application & Interpretations SL/HL](https://kennethnye.github.io/files/IBAIsyllabus.pdf)
+  * [Internal Assessment SL/HL](https://ibpublishing.ibo.org/live-exist/rest/app/tsm.xql?doc=d_5_matsl_tsm_1205_1_e&part=1&chapter=8)
+* **Cambridge-Singapore A Level** 
+  * [H1 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/8865_y22_sy.pdf
+  * [H2 math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9758_y22_sy.pdf
+  * [H3](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9820_y22_sy.pdf)
+  * [H2 Further Math](https://www.seab.gov.sg/docs/default-source/national-examinations/syllabus/alevel/2022syllabus/9649_y22_sy.pdf)
 * Edexcel AS & A level: all math modules
 * Cambridge International AS & A level: all math modules
 * Cambridge Pre-U diploma: all math modules
