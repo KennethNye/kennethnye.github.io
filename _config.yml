@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : https://kennethnye.github.io/images/site-logo.png
+title                    : site-logo.png
 title_separator          : "-"
 name                     : &name "Shikun Nie"
 description              : &description "personal description"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Shikun Nie"
   avatar           : "profile.jpg"
-  bio              : "Faculty of Mathophile, Institute of Mathomania"
+  bio              : "Faculty of Mathophile"
   location         : "Vancouver"
   employer         : "University of British Columbia"
   pubmed           : # example "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
