@@ -26,7 +26,7 @@
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
       {% endif %}
       {% if author.employer %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
+        <li><i class="fa fa-fw fa-building" aria-hidden="true"></i> {{ author.employer }}</li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
@@ -67,8 +67,8 @@
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
       {% endif %}
-      {% if author.stackoverflow %}
-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
+      {% if author.mathstackexchange %}
+        <li><a href="https://www.math.stackexchange.com/users/{{ author.mathstackexchange }}"><i class="fab fa-fw fa-stack-exchange" aria-hidden="true"></i> Math StackExchange</a></li>
       {% endif %}
       {% if author.lastfm %}
         <li><a href="https://lastfm.com/user/{{ author.lastfm }}"><i class="fab fa-fw fa-lastfm-square" aria-hidden="true"></i> Last.fm</a></li>
