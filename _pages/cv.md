@@ -21,7 +21,7 @@ Education
 * Bachelor of Science, First Class Honor in Chemistry, National University of Singapore, Singapore Aug 2010 - Jul 2014
   * Minor in Mathematics
   * Joint Minor in Environmental Chemistry with University of Toronto
-  * Final Year Project Supervisor: Yao Shao Qin
+  * [Final Year Project](https://kennethnye.github.io/files/Thesis-Final.pdf) supervised by Prof. Yao Shao Qin
 
 Work experience
 ======
