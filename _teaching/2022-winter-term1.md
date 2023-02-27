@@ -12,6 +12,7 @@ Derivatives of elementary functions. Applications and modelling: graphing, optim
 
 Office Hour
 ======
+
 Effective for 2022/2023 winter session term 1
 * Tuesday 11:00 am - 12:00 nn SWNG 208
 * Wednesday 10:30 am - 11:30 am BUCH D325
