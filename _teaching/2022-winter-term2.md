@@ -12,8 +12,18 @@ The definite integral, integration techniques, applications, modelling, infinite
 
 Office Hour
 ======
-To be announced
+Effective for 2022/2023 winter session term 1
+* Monday 2:00 pm - 3:00 pm IBLC 461
+* Tuesday 2:00 pm - 3:00 pm ANGU 339
 
 Slides
 ======
-To be published.
+[Download small class notes I here](http://kennethnye.github.io/files/Math101C-SCI.pdf)
+
+[Download small class notes II here](http://kennethnye.github.io/files/Math101C-SCII.pdf)
+
+[Download small class notes III here](http://kennethnye.github.io/files/Math101C-SCIII.pdf)
+
+[Download small class notes IV here](http://kennethnye.github.io/files/Math101C-SCIV.pdf)
+
+[Download small class notes V here](http://kennethnye.github.io/files/Math101C-SCV.pdf)
