@@ -33,6 +33,6 @@ Effective for 2022/2023 winter session term 1
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGZZqCioozrrID2XnFPpzhRDInhdooQAEhGBxCiXJ2gfSTVg/viewform?embedded=true" width="640" height="794" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-alternatively, scan the QR below to access the google form
+Alternatively, scan the QR below to access the google form
 
 <a href='https://me-qr.com' border='0' style='cursor:pointer;display:block'><img src='https://cdn.me-qr.com/qr/49995100.png?v=1677564380' alt='Create qr code for free'></a><a href='https://me-qr.com' border='0' style='cursor:default;display:none'>Create qr code for free</a>
