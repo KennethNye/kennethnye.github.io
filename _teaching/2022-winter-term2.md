@@ -29,6 +29,16 @@ Effective for 2022/2023 winter session term 1
 
 [Download small class notes V here](http://kennethnye.github.io/files/Math101C-SCV.pdf)
 
+[Download small class notes VI here](http://kennethnye.github.io/files/Math101C-SCVI.pdf)
+
+[Download small class notes VIII here](http://kennethnye.github.io/files/Math101C-SCVIII.pdf)
+
+[Download small class notes IX here](http://kennethnye.github.io/files/Math101C-SCIX.pdf)
+
+[Download small class notes X here](http://kennethnye.github.io/files/Math101C-SCX.pdf)
+
+[Download small class notes XI here](http://kennethnye.github.io/files/Math101C-SCXI.pdf)
+
 ## Survey
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGZZqCioozrrID2XnFPpzhRDInhdooQAEhGBxCiXJ2gfSTVg/viewform?embedded=true" width="640" height="794" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
