@@ -1,0 +1,1429 @@
+---
+layout: single
+title:  "Solution Manule to Elements of Mathematical Ecology"
+date : 2023-04-20
+header:
+  teaser: "unsplash-gallery-image-2-th.jpg"
+permalink: /posts/2023/04/blog-post-1/
+tags:
+  - solutions
+---
+
+
+## Problem 3.2
+
+The set of ODEs for the death process is
+
+$$\frac{dp_{n_{0}}}{dt} = - \mu n_{0}p_{n_{0}}$$
+
+$$\frac{dp_{n_{0} - 1}}{dt} = - \mu\left( n_{0} - 1 \right)p_{n_{0} - 1} + \mu n_{0}p_{n_{0}}$$
+
+$$\ldots$$
+
+$$\frac{dp_{n}}{dt} = - \mu np_{n} + \mu(n + 1)p_{n + 1}$$
+
+Solve $p_{n_{0}}(t)$
+
+$$p_{n_{0}}(t) = e^{- \mu n_{0}t}\ $$
+
+Then we can solve $p_{n_{0} - 1}(t)$
+
+$$p_{n_{0} - 1} = e^{- \mu\left( n_{0} - 1 \right)t}\int_{}^{}{e^{\mu\left( n_{0} - 1 \right)t}\mu n_{0}e^{- \mu n_{0}t}}$$
+
+$$= - n_{0}e^{- \mu n_{0}t} + Ce^{- \mu\left( n_{0} - 1 \right)t}$$
+
+$$p_{n_{0} - 1} = n_{0}e^{- \mu n_{0}t}\left( 1 - e^{- \mu t} \right)$$
+
+In general, the solution is,
+
+$$p_{n} = \begin{pmatrix}
+n_{0} \\
+n \\
+\end{pmatrix}e^{- \mu nt}\left( 1 - e^{- \mu t} \right)^{n_{0} - n}$$
+
+## Problem 3.3
+
+This cumulative density function of extinction time $T$ is,
+
+$$p_{0}(t) = \left( 1 - e^{- \mu t} \right)^{n_{0}}$$
+
+The expectation of the extinction time $T$ is,
+
+$$\mathbb{E}(T) = \int_{0}^{\infty}{t\frac{d}{dt}\left( p_{0}(t) \right)dt}$$
+
+$$= \int_{0}^{\infty}{tn_{0}\left( 1 - e^{- \mu t} \right)^{n_{0} - 1}\mu e^{- \mu t}dt}$$
+
+## Problem 3.5
+
+$$p_{n}(t + \Delta t) = r_{d}(n + 1)p_{n + 1}(t)\Delta t + r_{a}\left( B - (n - 1) \right)p_{n - 1}(t)\Delta t + \left( 1 - r_{d}n\Delta t - r_{a}(B - n)\Delta t \right)p_{n}(t)$$
+
+Therefore,
+
+$$\frac{dp_{n}(t)}{dt} = r_{d}(n + 1)p_{n + 1}(t) + r_{a}\left( B - (n - 1) \right)p_{n - 1}(t) - \left( r_{d}n + r_{a}(B - n) \right)p_{n}(t)$$
+
+with
+
+$$\frac{dp_{0}(t)}{dt} = r_{d}p_{1}(t) - Br_{a}p_{0}(t)$$
+
+$$\frac{dp_{B}(t)}{dt} = r_{a}p_{B - 1}(t) - B{r_{d}p}_{B}(t)$$
+
+The probability generating function is
+
+$$F(x,t) = \sum_{n = 0}^{B}{p_{n}(t)x^{n}}$$
+
+$$\frac{\partial F}{\partial t} = \sum_{n = 0}^{B}{{\dot{p}}_{n}(t)x^{n}}$$
+
+$$= r_{d}p_{1}(t) - Br_{a}p_{0}(t) + \sum_{n = 1}^{B - 1}{\left( r_{d}(n + 1)p_{n + 1}(t) + r_{a}\left( B - (n - 1) \right)p_{n - 1}(t) - \left( r_{d}n + r_{a}(B - n) \right)p_{n}(t) \right)x^{n}} + \left( r_{a}p_{B - 1}(t) - B{r_{d}p}_{B}(t) \right)x^{B}$$
+
+$$= r_{d}\frac{\partial}{\partial x}F(x,t) + (x - 1)r_{a}BF(x,t) + (1 - x)xr_{a}\frac{\partial}{\partial x}F(x,t) - r_{d}x\frac{\partial}{\partial x}F(x,t)$$
+
+In summary,
+
+$$\frac{\partial F}{\partial t} = \left( r_{d} + r_{a}x \right)(1 - x)\frac{\partial F}{\partial x} + r_{a}B(x - 1)F$$
+
+## Problem 3.6
+
+$$\frac{dp_{n}(t)}{dt} = \left( \beta(n - 1) + I \right)p_{n - 1}(t) + \mu(n + 1)p_{n + 1}(t) - \left( (\beta + \mu)n + I \right)p_{n}(t)$$
+
+with
+
+$$\frac{dp_{0}(t)}{dt} = \mu p_{1}(t) - Ip_{0}(t)$$
+
+The probability generating function is
+
+$$F(x,t) = \sum_{n = 0}^{\infty}{p_{n}(t)x^{n}}$$
+
+By taking the time derivative, we have
+
+$$\frac{\partial}{\partial t}F(x,t) = \sum_{n = 0}^{\infty}{{\dot{p}}_{n}(t)x^{n}}$$
+
+$$= \mu p_{1}(t) - Ip_{0}(t) + \sum_{n = 1}^{\infty}{\left( \left( \beta(n - 1) + I \right)p_{n - 1}(t) + \mu(n + 1)p_{n + 1}(t) - \left( (\beta + \mu)n + I \right)p_{n}(t) \right)x^{n}}$$
+
+$$= I(x - 1)F(x,t) + \left( \beta x^{2} + \mu - (\beta + \mu)x \right)\frac{\partial}{\partial x}F(x,t)$$
+
+Set $\frac{\partial}{\partial t}F(x,t) = 0$, we have
+
+$$0 = I(x - 1)F(x) + \left( \beta x^{2} + \mu - (\beta + \mu)x \right)\frac{d}{dx}F(x)$$
+
+$$\frac{1}{F}\frac{d}{dx}F = - \frac{I(x - 1)}{\left( \beta x^{2} + \mu - (\beta + \mu)x \right)}$$
+
+$$\frac{1}{F}\frac{d}{dx}F = - \frac{I}{\beta x - \mu}$$
+
+$$F(x) = \frac{A}{(\beta x - \mu)^{\frac{I}{\beta}}}$$
+
+Since $F(1) = 1$, we have
+
+$$F(x) = \left( \frac{\beta - \mu}{\beta x - \mu} \right)^{\frac{I}{\beta}}$$
+
+The expectation is
+
+$$E(N) = \left. \ \frac{\partial}{\partial x}F(x) \right|_{x = 1} = \left. \  - \frac{I(\beta - \mu)^{\frac{I}{\beta}}}{(\beta x - \mu)^{\frac{I}{\beta} + 1}} \right|_{x = 1}$$
+
+$$= \frac{I}{\mu - \beta}$$
+
+The variance is
+
+$$Var(N) = \left. \ \frac{\partial^{2}}{\partial x^{2}}F(x) \right|_{x = 1} + E(N) - E(N)^{2}$$
+
+$$= I\left. \ \left( \frac{I}{\beta} + 1 \right)\frac{\beta(\beta - \mu)^{\frac{1}{\beta}}}{(\beta x - \mu)^{\frac{1}{\beta} + 2}} \right|_{x = 1} + \frac{I}{\mu - \beta} - \left( \frac{I}{\mu - \beta} \right)^{2}$$
+
+$$= \frac{I(\beta + I)}{(\beta - \mu)^{2}} + \frac{I}{\mu - \beta} - \left( \frac{I}{\mu - \beta} \right)^{2}$$
+
+$$= \frac{\mu I}{(\mu - \beta)^{2}}$$
+
+The probability of extinction is,
+
+$$P(N = 0) = F(0) = F(x) = \left( 1 - \frac{\beta}{\mu} \right)^{\frac{I}{\beta}}$$
+
+## Problem 3.7
+
+Let $N_{i}(t)$ be the population size with $n_{0} = 1$, then
+
+$$E\left( N_{i}(t) \right) = e^{(\beta - \mu)t} = e^{0.1t}$$
+
+$$Var\left( N_{i}(t) \right) = \frac{\beta + \mu}{\beta - \mu}e^{(\beta - \mu)t}\left( e^{(\beta - \mu)t} - 1 \right) = 2e^{0.1t}\left( e^{0.1t} - 1 \right)$$
+
+Let $N(t) = \sum_{n = 1}^{50}{N_{i}(t)}$, by central limit theorem,
+
+$$N(t) \sim N\left( 50e^{0.1t},\ 100e^{0.1t}\left( e^{0.1t} - 1 \right) \right)$$
+
+We are looking for,
+
+$$P\left( N(t) \geq 100 \right) = 0.95$$
+
+or equivalently
+
+$$P\left( Z < \frac{100 - 50e^{0.1t}}{\sqrt{100e^{0.1t}\left( e^{0.1t} - 1 \right)}} \right) = 0.05$$
+
+From inverse normal function, we know that,
+
+$$\phi^{- 1}(0.05) = - 1.645$$
+
+Therefore,
+
+$$\frac{100 - 50e^{0.1t}}{\sqrt{100e^{0.1t}\left( e^{0.1t} - 1 \right)}} = - 1.645$$
+
+$$t = 9.96$$
+
+## Problem 4.1
+
+$$\frac{1}{N_{t + 1}} = \frac{1}{R_{0}}\frac{1}{N_{t}} + \frac{(R_{0} - 1)}{R_{0}K}$$
+
+The homogenous solution is with arbitrary constant $C$
+
+$$\frac{1}{N_{t}} = C\left( \frac{1}{R_{0}} \right)^{t}\frac{1}{N_{0}}\ \ $$
+
+A particular solution is obtained via solving the following equation,
+
+$$d = \frac{1}{R_{0}}d + \frac{(R_{0} - 1)}{R_{0}K}$$
+
+$$d = \frac{1}{K}$$
+
+In conclusion, the general solution is
+
+$$\frac{1}{N_{t}} = \left( \frac{1}{N_{0}} - \frac{1}{K} \right)\left( \frac{1}{R_{0}} \right)^{t} + \frac{1}{K}$$
+
+$$N_{t} = \frac{1}{\left( \frac{1}{R_{0}} \right)^{t}\left( \frac{1}{N_{0}} - \frac{1}{K} \right) + \frac{1}{K}} = \frac{K}{1 + \left( \frac{K}{N_{0}} - 1 \right)e^{- t\ln R_{0}}}\ $$
+
+This is precisely equation $(1.8)$ if we define $r = \ln R_{0}$.
+
+## Problem 4.2
+
+We solve the following equation to find the fixed points,
+
+$$x = xe^{r\left( 1 - \frac{x}{K} \right)}$$
+
+$$x\left( 1 - e^{r\left( 1 - \frac{x}{K} \right)} \right) = 0$$
+
+either $x = 0$ or $x = K$.
+
+Let
+
+$$f(x) = xe^{r\left( 1 - \frac{x}{K} \right)}$$
+
+$$f^{'}(x) = e^{r\left( 1 - \frac{x}{K} \right)} - \frac{r}{K}xe^{r\left( 1 - \frac{x}{K} \right)}$$
+
+$$f^{'}(0) = e^{r} > 1$$
+
+Therefore, $x = 0$ is unstable if $r > 0$
+
+$$f^{'}(K) = 1 - r$$
+
+Therefore, $x = K$ is stable if $0 < r < 2$ and unstable if $r > 2$.
+
+For cobweb analysis, see the following desmos graph,
+
+<https://www.desmos.com/calculator/ekrkav5ddd>
+
+## Problem 4.3
+
+Solve
+
+$$x = \frac{R_{0}^{\beta}x}{\left( 1 + \frac{R_{0} - 1}{K}x \right)^{\beta}}$$
+
+$$x\left( 1 - \frac{R_{0}^{\beta}}{\left( 1 + \frac{R_{0} - 1}{K}x \right)^{\beta}} \right) = 0$$
+
+So, either $x = 0$ or
+
+$$1 - \frac{R_{0}^{\beta}}{\left( 1 + \frac{R_{0} - 1}{K}x \right)^{\beta}} = 0$$
+
+$$x = K$$
+
+.
+
+Let
+
+$$f(x) = \frac{R_{0}^{\beta}x}{\left( 1 + \frac{R_{0} - 1}{K}x \right)^{\beta}}$$
+
+Then
+
+$$f^{'}(x) = \frac{R_{0}^{\beta}\left( 1 + \frac{R_{0} - 1}{K}x \right)^{\beta} - R_{0}^{\beta}x\beta\left( 1 + \frac{R_{0} - 1}{K}x \right)^{\beta - 1}\frac{R_{0} - 1}{K}}{\left( 1 + \frac{R_{0} - 1}{K}x \right)^{2\beta}}$$
+
+$$= \frac{R_{0}^{\beta}\left( 1 + \frac{R_{0} - 1}{K}x \right) - R_{0}^{\beta}x\beta\frac{R_{0} - 1}{K}}{\left( 1 + \frac{R_{0} - 1}{K}x \right)^{\beta + 1}}$$
+
+We have
+
+$$f^{'}(0) = R_{0}^{\beta} > 0$$
+
+So $x = 0$ is unstable while we have
+
+$$f^{'}(K) = \frac{R_{0}^{\beta + 1} - R_{0}^{\beta}\beta\left( R_{0} - 1 \right)}{R_{0}^{\beta + 1}} = 1 - \beta\left( 1 - \frac{1}{R_{0}} \right)$$
+
+If
+
+$$\left| 1 - \beta\left( 1 - \frac{1}{R_{0}} \right) \right| < 1$$
+
+$$0 < \beta\left( 1 - \frac{1}{R_{0}} \right) < 2$$
+
+$$1 - \frac{2}{\beta} < \frac{1}{R_{0}} < 1$$
+
+in the case that $\beta > 2$
+
+$$1 < R_{0} < \frac{\beta}{\beta - 2}$$
+
+in the case that $\beta < 2$
+
+$$R_{0} > 1$$
+
+the fixed point $x = K$ is stable while it is unstable if
+$0 < R_{0} < 1$ or $R_{0} > \frac{\beta}{\beta - 2}$ and if $R_{0} > 1$
+in case of $\beta < 2$. See desmos link
+
+<https://www.desmos.com/calculator/bmhtjnubck>
+<https://www.desmos.com/calculator/xafpnqmsse>
+
+<iframe src="https://www.desmos.com/calculator/8xhms5fkcc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+## Problem 4.4
+
+Solve
+
+$$x = (1 + r)\left( (1 + r)x - \frac{r}{K}x^{2} \right) - \frac{r}{K}\left( (1 + r)x - \frac{r}{K}x^{2} \right)^{2}$$
+
+$$x\left\lbrack (1 + r)\left( (1 + r) - \frac{r}{K}x \right) - \frac{r}{K}x\left( (1 + r) - \frac{r}{K}x \right)^{2} - 1 \right\rbrack = 0$$
+
+$$x\left\lbrack - \left( \frac{r}{K}x \right)^{3} + 2(1 + r)\left( \frac{r}{K}x \right)^{2} - \left( r^{2} + 3r + 2 \right)\left( \frac{r}{K}x \right) + r^{2} + 2r \right\rbrack = 0$$
+
+$$x\left\lbrack \left( \frac{r}{K}x - r \right)\left( - \left( \frac{r}{K}x \right)^{2} + (r + 2)\left( \frac{r}{K}x \right) - (r + 2) \right) \right\rbrack = 0$$
+
+The roots are,
+
+$$x = 0,\ x_{\pm} = \left( \frac{K}{r} \right)\frac{r + 2 \pm \sqrt{r^{2} - 4}}{2},x = K$$
+
+We reject $x = 0$ and $x = K$ since we know they are fixed points.
+
+Let
+
+$$f(x) = (1 + r)\left( (1 + r)x - \frac{r}{K}x^{2} \right) - \frac{r}{K}\left( (1 + r)x - \frac{r}{K}x^{2} \right)^{2}$$
+
+$$f^{'}(x) = (1 + r)\left( (1 + r) - 2\frac{r}{K}x \right) - 2\frac{r}{K}\left( (1 + r)x - \frac{r}{K}x^{2} \right)\left( (1 + r) - 2\frac{r}{K}x \right)$$
+
+$$= \left( (1 + r) - 2\frac{r}{K}x \right)\left( (1 + r) - 2\frac{r}{K}\left( (1 + r)x - \frac{r}{K}x^{2} \right) \right)$$
+
+So
+
+$$f^{'}\left( x_{\pm} \right) = \left( (1 + r) - \left( r + 2 \pm \sqrt{r^{2} - 4} \right) \right)\left( (1 + r) - \left( (1 + r)\left( r + 2 \pm \sqrt{r^{2} - 4} \right) - \frac{1}{2}\left( r + 2 \pm \sqrt{r^{2} - 4} \right)^{2} \right) \right)$$
+
+$$= \left( - 1 \mp \sqrt{r^{2} - 4} \right)\left( - 1 \pm \sqrt{r^{2} - 4} \right)$$
+
+$$= 1 - \left( r^{2} - 4 \right)$$
+
+$$= 5 - r^{2}$$
+
+Besides $r > 2$, we require the following for $x_{\pm}$ to be stable.
+
+$$\left| 5 - r^{2} \right| < 1$$
+
+$$2 < r < \sqrt{6}$$
+
+## Problem 5.1
+
+Let $x_{n} = N_{n} - K$ and linearize the above equation at
+$N_{t} = N_{t - T} = K$,
+
+$$f\left( N_{t},N_{t - T} \right) = \frac{R_{0}N_{t}}{1 + \frac{R_{0} - 1}{K}N_{t - T}}$$
+
+$$\frac{\partial f}{\partial N_{t}} = \frac{R_{0}}{1 + \frac{R_{0} - 1}{K}N_{t - T}}$$
+
+$$\frac{\partial f}{\partial N_{t - T}} = - \frac{R_{0}\frac{R_{0} - 1}{K}N_{t}}{\left( 1 + \frac{R_{0} - 1}{K}N_{t - T} \right)^{2}}$$
+
+$$x_{t + 1} = \left. \ \frac{\partial f}{\partial N_{t}} \right|_{N_{t} = K}x_{t} + \left. \ \frac{\partial f}{\partial N_{t - T}} \right|_{N_{t - T} = K}x_{t - T}$$
+
+$$x_{t + 1} = x_{t} + \left( \frac{1}{R_{0}} - 1 \right)x_{t - T}$$
+
+We try the solution of the following form,
+
+$$x_{t} = x_{0}\lambda^{t}$$
+
+which leads to,
+
+$$\lambda^{T}(1 - \lambda) = \left( 1 - \frac{1}{R_{0}} \right)$$
+
+The maximum of the LHS occurs at $\lambda = \frac{T}{T + 1}$ since,
+
+$$\frac{d}{d\lambda}\lambda^{T}(1 - \lambda) = 0$$
+
+$$T\lambda^{T - 1}(1 - \lambda) - \lambda^{T} = 0$$
+
+$$\lambda^{T - 1}\left( T(1 - \lambda) - \lambda \right) = 0\ $$
+
+with the maximum value
+
+$$\left( \frac{T}{T + 1} \right)^{T}\left( 1 - \frac{T}{T + 1} \right) = \frac{T^{T}}{(T + 1)^{T + 1}}$$
+
+Instability happens if
+$\frac{T^{T}}{(T + 1)^{T + 1}} < 1 - \frac{1}{R_{0}}$, that is to say
+$R_{0} > \frac{(T + 1)^{T + 1}}{(T + 1)^{T + 1} - T^{T}}$
+
+If we set $r = 1 - \frac{1}{R_{0}}$, the analysis of the oscillation is
+the same as those from delayed logistic differential equations in the
+textbook. Thus, we conclude,
+
+$$r_{u} = 1 - \frac{1}{R_{0}^{u}} = 2\cos\frac{(2n + 1)\pi T}{2T + 1}$$
+
+## Problem 5.2
+
+Solve
+
+$$\alpha xe^{- \beta x} - \delta x = 0$$
+
+And we have either $x = 0$ or
+$x = \frac{1}{\beta}\ln\frac{\alpha}{\delta}$.
+
+Linearize around $N(t) = \frac{1}{\beta}\ln\frac{\alpha}{\delta}$ and
+denote $x(t) = N(t) - \frac{1}{\beta}\ln\frac{\alpha}{\delta}$, we have
+
+$$\frac{d}{dt}N(t) = \alpha N(t - \tau)e^{- \beta N(t - \tau)} - \delta N(t)$$
+
+$$\frac{dx}{dt} = \delta\left( 1 - \ln\frac{\alpha}{\delta} \right)x(t - \tau) - \delta x(t)$$
+
+Try an exponential solution,
+
+$$x(t) = x_{0}e^{\lambda t}$$
+
+$$x_{0}\lambda e^{\lambda t} = \delta\left( 1 - \ln\frac{\alpha}{\delta} \right)x_{0}e^{\lambda(t - \tau)} - \delta x_{0}e^{\lambda t}$$
+
+$$\lambda = \delta\left( 1 - \ln\frac{\alpha}{\delta} \right)e^{- \lambda\tau} - \delta$$
+
+Define $\mu = \tau\lambda + \delta\tau$, we have
+
+$$\mu = \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau}e^{- \mu}$$
+
+This form is very similar to $(5.45)$. Thus we conclude the following
+curve separates the exponential and oscillatory behavior.
+
+$$- \frac{1}{e} = \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau}$$
+
+In fact, we can rearrange the original transcendental equation,
+
+$$\mu e^{\mu} = \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau}$$
+
+which is the Lambert function. So, we have if
+$\delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \geq 0$
+
+$$\mu = W_{0}\left( \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \right)$$
+
+and if
+$- \frac{1}{e} < \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} < 0$
+
+$$\mu = W_{0}\left( \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \right),W_{- 1}\left( \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \right)$$
+
+That is to say, if
+$\delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \geq 0$
+
+$$\tau\lambda = W_{0}\left( \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \right) - \delta\tau$$
+
+In this case, the solution is exponentially growing if
+
+$$W_{0}\left( \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \right) > \delta\tau$$
+
+$$\delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} > \delta\tau e^{\delta\tau}$$
+
+$$1 - \ln\frac{\alpha\tau}{\delta\tau} > 1$$
+
+$$\alpha < \delta$$
+
+The solution is exponentially decaying if $\delta > \alpha$.
+
+And in the case where
+$- \frac{1}{e} < \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} < 0$
+
+$$\tau\lambda = W_{0}\left( \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \right) - \delta\tau,W_{- 1}\left( \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau} \right) - \delta\tau$$
+
+It is clearly both of $\lambda$ are negative. Thus, the solution is
+exponential decay.
+
+To find the boundary for damped or growing oscillation, we set
+$\mu = i\omega + \delta\tau$ so that
+
+$$\mu = \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)e^{\delta\tau}e^{- \mu}$$
+
+$$i\omega + \delta\tau = \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)\left( \cos\omega - i\sin\omega \right)$$
+
+Compare the real and imagery parts, we have
+
+$$\delta\tau = \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)\cos\omega$$
+
+$$\omega = - \delta\tau\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)\sin\omega$$
+
+By using the identity $\sin^{2}x + \cos^{2}x = 1$, we have
+
+$$\omega^{2} + (\delta\tau)^{2} = (\delta\tau)^{2}\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)^{2}$$
+
+Substitute this into the real part equality,
+
+$$1 = \left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)\cos\left( \delta\tau\sqrt{\left( 1 - \ln\frac{\alpha\tau}{\delta\tau} \right)^{2} - 1} \right)$$
+
+See the desmos graph for details,
+
+<https://www.desmos.com/calculator/z426wt3nan>
+
+![](media/image2.png){width="4.166666666666667in"
+height="4.166666666666667in"}
+
+## Problem 6.1
+
+If $R_{0} = 1$, we have
+
+$$F_{t + 1}^{''}(1) = F_{t}^{''}(1) + F''(1)$$
+
+which is the recurrence relations for arithmetic sequence with a
+difference $F''(1)$. Therefore,
+
+$$F_{t}^{''}(1) = tF''(1)$$
+
+Let's assume $R_{0} \neq 1$.
+
+$$F_{t + 1}^{''}(1) = R_{0}F_{t}^{''}(1) + R_{0}^{2t}F''(1)$$
+
+The first two terms are
+
+$$F_{2}^{''}(1) = \left( R_{0} + R_{0}^{2} \right)F''(1)$$
+
+$$F_{3}^{''}(1) = \left( R_{0}^{2} + R_{0}^{3} + R_{0}^{4} \right)F^{''}(1)$$
+
+So in general, we have
+
+$$F_{t}^{''}(1) = \left( R_{0}^{t - 1} + R_{0}^{t} + \cdots + R_{0}^{2t - 2} \right)F^{''}(1)$$
+
+$$= \frac{R_{0}^{t - 1}(1 - R_{0}^{t})}{1 - R_{0}}F^{''}(1)$$
+
+$$= \frac{(1 - R_{0}^{t})R_{0}^{t}}{R_{0}\left( 1 - R_{0} \right)}F^{''}(1)$$
+
+## Problem 6.2
+
+$$R_{0} = E\left( N_{1} \right) = p(1 - m) + 2pm$$
+
+So the population growth rate for $1980$ and $1999$ are respectively
+$1.05237$ and $0.97572$.
+
+The probability of distinction is the fixed point of
+
+$$F(x) = (1 - p) + p(1 - m)x + pmx^{2}$$
+
+Let
+
+$$(1 - p) + p(1 - m)x + pmx^{2} = x$$
+
+$$(1 - p) + \left( p(1 - m) - 1 \right)x + pmx^{2} = 0$$
+
+$$x = \frac{\left( 1 - p(1 - m) \right) \pm \sqrt{\left( 1 - p(1 - m) \right)^{2} - 4pm(1 - p)}}{2pm}$$
+
+The probability of distinction for $1980$ and $1999$ are respectively
+$0.1603$ and $1$.
+
+## Problem 6.3
+
+The probablities producing $0,1,2,3$ offsprings are
+
+$$p_{0} = \frac{1}{8}$$
+
+$$p_{1} = \frac{3}{8}$$
+
+$$p_{2} = \frac{3}{8}$$
+
+$$p_{3} = \frac{1}{8}$$
+
+The probability generating function is
+
+$$F(x) = \frac{1}{8} + \frac{3}{8}x + \frac{3}{8}x^{2} + \frac{1}{8}x^{3}$$
+
+The growth rate is the expectation which can be calculated as the first
+derivative of $F(x)$ evaluated at $x = 1$.
+
+$$F^{'}(x) = \frac{3}{8} + \frac{3}{4}x + \frac{3}{8}x^{2}$$
+
+$$R_{0} = F^{'}(1) = \frac{3}{2}$$
+
+![](media/image3.png){width="3.318627515310586in"
+height="3.318627515310586in"}
+
+The $x$-coordinate of the intersection point is the probability of
+distinction, which is $0.2361$.
+
+## Problem 6.4
+
+$$F(x) = p_{0} + \sum_{n = 1}^{\infty}{bc^{n - 1}x^{n}}$$
+
+$$= p_{0} + \frac{bx}{1 - cx} = 0.4825 + \frac{0.2126x}{1 - 0.5893x}$$
+
+$$F^{'}(x) = \frac{0.2126(1 - 0.5893x) + 0.2126x \times 0.5893}{(1 - 0.5893x)^{2}}$$
+
+$$R_{0} = F^{'}(1) = 1.260$$
+
+The probability of distinction can be found by setting $F(x) = x$,
+
+$$x = 0.8193$$
+
+
+## Problem 6.5
+
+Substitute the following expression
+
+$$G(t) = \int_{0}^{t}{g(s)ds}$$
+
+$$= 1 - e^{- \lambda t}$$
+
+into equation $(6.62)$
+
+$$F(t,x) = x\left\lbrack 1 - G(t) \right\rbrack + \int_{0}^{t}{H\left\lbrack F(t - u,x) \right\rbrack g(u)du}$$
+
+$$= xe^{- \lambda t} + \int_{0}^{t}{H\left\lbrack F(t - u,x) \right\rbrack\lambda e^{- \lambda u}du}$$
+
+Take partial derivatives on both sides,
+
+$$\frac{\partial F}{\partial t} = - \lambda xe^{- \lambda t} + H\left\lbrack F(0,x) \right\rbrack\lambda e^{- \lambda t} + \int_{0}^{t}{\frac{\partial}{\partial t}H\left\lbrack F(t - u,x) \right\rbrack\lambda e^{- \lambda u}du}$$
+
+$$= - \lambda xe^{- \lambda t} + H\left\lbrack F(0,x) \right\rbrack\lambda e^{- \lambda t} - \int_{0}^{t}{\frac{\partial}{\partial u}H\left\lbrack F(t - u,x) \right\rbrack\lambda e^{- \lambda u}du}$$
+
+$$= - \lambda xe^{- \lambda t} + H\left\lbrack F(0,x) \right\rbrack\lambda e^{- \lambda t} - \left. \ H\left\lbrack F(t - u,x) \right\rbrack\lambda e^{- \lambda u} \right|_{0}^{t} - \lambda\int_{0}^{t}{H\left\lbrack F(t - u,x) \right\rbrack\lambda e^{- \lambda u}du}$$
+
+$$= - \lambda xe^{- \lambda t} + H\left\lbrack F(0,x) \right\rbrack\lambda e^{- \lambda t} - H\left\lbrack F(0,x) \right\rbrack\lambda e^{- \lambda t} + \lambda H\left\lbrack F(t,x) \right\rbrack - \lambda\int_{0}^{t}{H\left\lbrack F(t - u,x) \right\rbrack\lambda e^{- \lambda u}du}$$
+
+$$= \lambda H\left\lbrack F(t,x) \right\rbrack - \lambda F(t,x)$$
+
+If $H(x) = x^{2}$, we have
+
+$$\frac{\partial F(t,x)}{\partial t} = \lambda F^{2}(t,x) - \lambda F(t,x)$$
+
+$$\left( \frac{1}{F - 1} - \frac{1}{F} \right)dF = \lambda dt$$
+
+$$\ln|F - 1| - \ln|F| = \lambda t + A$$
+
+$$1 - \frac{1}{F} = Be^{\lambda t}$$
+
+$$F(t,x) = \frac{1}{1 - B(x)e^{\lambda t}}$$
+
+The initial conditions is
+
+$$F(0,x) = x$$
+
+Therefore, we have
+
+$$F(t,x) = \frac{1}{1 - \left( 1 - \frac{1}{x} \right)e^{\lambda t}}$$
+
+$$= \frac{xe^{- \lambda t}}{1 - x(1 - e^{- \lambda t})}$$
+
+$$= xe^{- \lambda t}\left( 1 + x(1 - e^{- \lambda t}) + x^{2}\left( 1 - e^{- \lambda t} \right)^{2} + \ldots \right)$$
+
+So
+
+$$p(t,n) = e^{- \lambda t}\left( 1 - e^{- \lambda t} \right)^{n - 1}$$
+
+which is a geometric distribution with parameter $e^{- \lambda t}$.
+
+## Problem 8.1
+
+\(1\)
+
+$$\frac{dN}{dt} = f(N) = rN\left( 1 - \frac{N}{K} \right) - cNP$$
+
+Set $\frac{dN}{dt} = 0$,
+
+$$rN\left( 1 - \frac{N}{K} \right) - cNP = 0$$
+
+$$N\left( r\left( 1 - \frac{N}{K} \right) - cP \right) = 0$$
+
+$$N = 0,N = K - \frac{cKP}{r}$$
+
+At equilibrium points, we have
+
+$$f^{'}(N) = r\left( 1 - \frac{N}{K} \right) - \frac{rN}{K} - cP$$
+
+$$f^{'}(0) = r - cP$$
+
+$$f^{'}\left( K - \frac{cKP}{r} \right) = - r + cP$$
+
+In the case where $r - cP > 0$, $N = 0$ is unstable while
+$K - \frac{cKP}{r}$ is stable. In the case where $r - cP < 0$, $N = 0$
+is stable while $K - \frac{cKP}{r}$ is unstable. If $r = cP$, there is
+only one equilibrium $N = 0$, which is unstable since
+
+$$\frac{dN}{dt} = f(N) = - \frac{rN^{2}}{K}$$
+
+\(2\)
+
+$$\frac{dN}{dt} = f(N) = rN\left( 1 - \frac{N}{K} \right) - \frac{cN}{a + N}P$$
+
+Set $\frac{dN}{dt} = 0$,
+
+$$N\left( r\left( 1 - \frac{N}{K} \right) - \frac{c}{a + N}P \right) = 0$$
+
+Either $N = 0$ or
+
+$$r\left( 1 - \frac{N}{K} \right) - \frac{c}{a + N}P = 0$$
+
+$$r(a + N)(K - N) - cKP = 0\ $$
+
+$$- rN^{2} + (K - a)N + raK - cKP = 0$$
+
+$$N = \frac{a - K \pm \sqrt{(K - a)^{2} + 4Kr(ra - cP)}}{- 2r}$$
+
+$$N = N = \frac{K - a \mp \sqrt{(K - a)^{2} + 4Kr(ra - cP)}}{2r}$$
+
+If $\Delta = (K - a)^{2} + 4Kr(ra - cP) > 0$, there are three equilibria
+$0,N_{+},N_{-}$. If $\Delta = 0$, there are two equilibria $0,N_{\pm}$.
+If $\Delta < 0$, there is only one equilibrium $0$.
+
+In the first case if further that $ra - cP > 0$, $N_{+} > 0$ and
+$N_{-} < 0$. If $- \frac{(K - a)^{2}}{4Kr} < ra - cP < 0$ with $K > a$,
+$N_{+} > N_{-} > 0$, with $K < a$, $N_{-} < N_{+} < 0$. If $ra - cP = 0$
+with $K > a$, we have $N_{+} > N_{-} = 0$ and $K < a$, we have
+$N_{-} < N_{+} = 0$. In the last scenario, there are only two distinct
+equilibria.
+
+In the second case if $- \frac{(K - a)^{2}}{4Kr} = ra - cP$ with
+$K > a$, we have $N_{\pm} > 0$, with $K < a$, we have $N_{\pm} < 0$ and
+with $K = a$, we have$N_{\pm} = 0$. In the last scenario, there is only
+one distinct equilibrium.
+
+For the third case to happen, it must be either $K \neq a$ and
+$ra - cP < - \frac{(K - a)^{2}}{4Kr}$ or $K = a$ and $ra - cP < 0$. The
+results are summarized in the following table,
+
+ 
+  |                       | $$K < a$$ |               $$K = a$$ |               $$K > a$$|
+  |-----------------------|-----------|-------------------------|------------------------| 
+  |$$P < \frac{ra}{c}$$   |$$N_{-} < 0 < N_{+}$$ |$$N_{-} < 0 < N_{+}$$ |  $$N_{-} < 0 < N_{+}$$|
+  |$$P = \frac{ra}{c}$$ | $$N_{-} < N_{+} = 0$$  | $$N_{\pm} = 0$$| $$N_{+} > N_{-} = 0$$|
+  |$$\frac{ra}{c} < P < \frac{(K - a)^{2}}{4Kcr} + \frac{ra}{c}$$ |  $$N_{-} < N_{+} < 0$$   |  |$$N_{+} > N_{-} > 0$$|
+  |$$P = \frac{(K - a)^{2}}{4Kcr} + \frac{ra}{c}$$ | $$N_{\pm} < 0$$  |    |  $$N_{\pm} > 0$$|
+  |$$P > \frac{(K - a)^{2}}{4Kcr} + \frac{ra}{c}$$ | $$0$$ |   $$0$$ | $$0$$|
+  
+
+An example bifurcation diagram when $K < a$ is shown below:
+
+<https://www.desmos.com/calculator/o4zqqxfrkw>
+<iframe src="https://www.desmos.com/calculator/g7a0dkfsic?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+\(3\)
+
+$$\frac{dN}{dt} = f(N) = rN\left( 1 - \frac{N}{K} \right) - \frac{cN^{2}}{a^{2} + N^{2}}P$$
+
+Set $\frac{dN}{dt} = 0$ to find the equilibria,
+
+$$rN\left( 1 - \frac{N}{K} \right) - \frac{cN^{2}}{a^{2} + N^{2}}P = 0$$
+
+$$N\left( r\left( 1 - \frac{N}{K} \right) - \frac{cN}{a^{2} + N^{2}}P \right) = 0$$
+
+Either $N = 0$ or
+
+$$r\left( 1 - \frac{N}{K} \right) - \frac{cN}{a^{2} + N^{2}}P = 0$$
+
+$$\left( a^{2} + N^{2} \right)r\left( 1 - \frac{N}{K} \right) - cPN = 0$$
+
+which is a cubic function. Instead of solving this cubic, consider
+
+$$g(N) = rN\left( 1 - \frac{N}{K} \right)$$
+
+$$h(N) = \frac{cN^{2}}{a^{2} + N^{2}}P$$
+
+Maybe let's simplify the ODE first. Set
+$x = \frac{N}{K},\ T = rt,\ \alpha = \frac{cP}{rK},\beta = \frac{a}{K}$
+then we have
+
+$$\frac{dx}{dT} = x(1 - x) - \frac{\alpha x^{2}}{\beta^{2} + x^{2}}P$$
+
+So
+
+$$g(x) = x(1 - x)$$
+
+$$h(x) = \frac{\alpha x^{2}}{\beta^{2} + x^{2}}$$
+
+these two functions may have $2,3,4$ intersections.
+
+An example bifurcation diagram with $\beta = 0.1$. In this case the
+number of intersections is summarized in the table below:
+<https://www.desmos.com/calculator/fhhcrdyfzd>
+
+<iframe src="https://www.desmos.com/calculator/pfovf4uiqz?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+  -----------------------------------------------------------------------
+  |Range of $\alpha$  |                 Number of intersections|
+  |---|---|
+  |$$0 < \alpha < 0.1787$$  |           $$2$$|
+  |$$a = 0.1787$$             |         $$3$$|
+  |$$0.1787 < a < 0.2604$$  |           $$4$$|
+  |$$a = 0.2604$$                 |     $$3$$|
+  |$$a > 0.2604$$    |                  $$2$$|
+  -----------------------------------------------------------------------
+
+
+## Problem 9.1
+
+From equation $(9.8)$, we have
+
+$$x_{2} = \frac{\alpha}{2}\left( (\beta - 1) - \sqrt{(\beta - 1)^{2} - \frac{4}{\alpha}} \right)$$
+
+From $(9.6b)$ we have
+
+$$g^{'}(x) = - \frac{1}{\gamma}\left( \frac{x^{2}}{\alpha} + x + 1 \right) + \left( 1 - \frac{x}{\gamma} \right)\left( \frac{2x}{\alpha} + 1 \right)$$
+
+$$= - \frac{3}{\gamma}\frac{x^{2}}{\alpha} + \left( \frac{2}{\alpha} - \frac{2}{\gamma} \right)x + 1 - \frac{1}{\gamma}$$
+
+The condition for Hopf bifurcation is
+
+$$g^{'}\left( x_{2} \right) = 0$$
+
+Since $x_{2}$ is a root of the following quadratic
+
+$$\frac{x^{2}}{\alpha} - (\beta - 1)x + 1 = 0$$
+
+we have
+
+$$g^{'}\left( x_{2} \right) = - \frac{3}{\gamma}\frac{x_{2}^{2}}{\alpha} + \left( \frac{2}{\alpha} - \frac{2}{\gamma} \right)x_{2} + 1 - \frac{1}{\gamma}$$
+
+$$= - \frac{3}{\gamma}\left( (\beta - 1)x_{2} - 1 \right) + \left( \frac{2}{\alpha} - \frac{2}{\gamma} \right)x_{2} + 1 - \frac{1}{\gamma}$$
+
+$$= \left( \frac{2}{\alpha} - \frac{2}{\gamma} - \frac{3}{\gamma}(\beta - 1) \right)x_{2} + 1 + \frac{2}{\gamma}$$
+
+$$= \left( \frac{2}{\alpha} - \frac{2}{\gamma} - \frac{3}{\gamma}(\beta - 1) \right)\frac{\alpha}{2}\left( (\beta - 1) - \sqrt{(\beta - 1)^{2} - \frac{4}{\alpha}} \right) + 1 + \frac{2}{\gamma}$$
+
+$$= \frac{1}{\gamma}\left( 2 - \ \frac{\alpha}{2}(3\beta - 1)\left( (\beta - 1) - \sqrt{(\beta - 1)^{2} - \frac{4}{\alpha}} \right) \right) + \left( \beta - \sqrt{(\beta - 1)^{2} - \frac{4}{\alpha}} \right)$$
+
+By setting $g^{'}\left( x_{2} \right) = 0$, we have
+
+$$\gamma = \frac{- 2 + \ \frac{\alpha}{2}(3\beta - 1)\left( (\beta - 1) - \sqrt{(\beta - 1)^{2} - \frac{4}{\alpha}} \right)}{\beta - \sqrt{(\beta - 1)^{2} - \frac{4}{\alpha}}}$$
+
+## Problem 10.1
+
+$$\frac{dy}{dt} = A(1 - y - z)y - y - Byz$$
+
+$$\frac{dz}{dt} = Byz - z$$
+
+The Jacobian matrix is
+
+$$J(y,z) = \begin{pmatrix}
+A(1 - 2y - z) - 1 - Bz & - Ay - By \\
+Bz & By - 1 \\
+\end{pmatrix}$$
+
+At the equilibrium $x = 1,y = 0,z = 0$, we have
+
+$$J(0,0) = \begin{pmatrix}
+A - 1 & 0 \\
+0 & - 1 \\
+\end{pmatrix}$$
+
+Therefore, this equilibrium is a stable node if $A < 1$ and an unstable
+saddle node if the inequality is reversed.
+
+At the equilibrium $x = \frac{1}{A},y = 1 - \frac{1}{A},z = 0$, we have
+
+$$J\left( 1 - \frac{1}{A},0 \right) = \begin{pmatrix}
+1 - A & 1 - A \\
+0 & B\left( 1 - \frac{1}{A} \right) - 1 \\
+\end{pmatrix}$$
+
+Given $A > 1$, this equilibrium is a stable node if
+
+$$B\left( 1 - \frac{1}{A} \right) - 1 < 0$$
+
+i.e.,
+
+$$B < \frac{A}{A - 1}$$
+
+And it is an unstable saddle node if the inequality is reversed.
+
+At equilibrium
+$x = 1 - \frac{A}{A + B},\ y = \frac{1}{B},z = \frac{A}{A + B} - \frac{1}{B}$,
+we have
+
+$$J\left( \frac{1}{B},\frac{A}{A + B} - \frac{1}{B} \right) = \begin{pmatrix}
+ - \frac{A}{B} & - \frac{A}{B} - 1 \\
+B\left( \frac{A}{A + B} - \frac{1}{B} \right) & 0 \\
+\end{pmatrix}$$
+
+$$\det J = B\left( \frac{A}{A + B} - \frac{1}{B} \right)\left( \frac{A}{B} + 1 \right)$$
+
+$${tr}J = - \frac{A}{B}$$
+
+The trace is obviously less than $0$, we need the determinant to be
+positive so that the equilibrium is stable. So we require that
+
+$$\frac{A}{A + B} - \frac{1}{B} > 0$$
+
+i.e.,
+
+$$B > \frac{A}{A - 1}$$
+
+In this case if $\Delta = {tr}^{2}J - 4\det J < 0$, there are conjugate
+pair of roots with negative real parts so that the equilibrium is a
+stable focus and if $\ \Delta = {tr}^{2}J - 4\det J > 0,$ there are two
+real negative roots so that the equilibrium is a stable node. Denote
+
+$$\Delta(B) = \left( \frac{A}{B} \right)^{2} - 4B\left( \frac{A}{A + B} - \frac{1}{B} \right)\left( \frac{A}{B} + 1 \right)$$
+
+$$B^{2}\Delta(B) = A^{2} - 4B(AB - A - B)$$
+
+$$B^{2}\Delta(B) = - 4(A - 1)B^{2} + 4AB + A^{2}$$
+
+The maximum of the quadratic occurs at
+$B = \frac{A}{2(A - 1)} < \frac{A}{A - 1}$. Therefore, we need
+$B < B_{+}$ for $\Delta(B) > 0$ and $B > B_{+}$ for $\Delta(B) < 0$,
+where
+
+$$B_{+} = \frac{A + \sqrt{A^{2} + A^{2}(A - 1)}}{2(A - 1)}$$
+
+$$= \frac{A\left( 1 + \sqrt{A} \right)}{2(A - 1)}$$
+
+$$= \frac{A}{2\left( \sqrt{A} - 1 \right)}$$
+
+## Problem 12.1
+
+Setting $\frac{dN_{1}}{dT} = 0$, we have
+
+$$N_{1} = 0$$
+
+$$N_{1} + \alpha_{12}N_{2} = K_{1}\ $$
+
+Setting $\frac{dN_{2}}{dT} = 0$, we have
+
+$$N_{2} = 0$$
+
+$$\alpha_{21}N_{1} = K_{2}$$
+
+The equilibria are
+
+$$(0,0)$$
+
+$$\left( K_{1},0 \right)$$
+
+$$\left( \frac{K_{2}}{\alpha_{21}},\frac{K_{1} - \frac{K_{2}}{\alpha_{21}}}{\alpha_{12}} \right)$$
+
+The first two equilibria always exist while the third equilibrium exists
+only if $\alpha_{21} \geq \frac{K_{2}}{K_{1}}$.
+
+The Jacobian matrix is
+
+$$J\left( N_{1},N_{2} \right) = \begin{pmatrix}
+r_{1}\left( 1 - \frac{2N_{1} + \alpha_{12}N_{2}}{K_{1}} \right) & - \frac{r_{1}N_{1}\alpha_{12}}{K_{1}} \\
+ - \frac{r_{2}N_{2}\alpha_{21}}{K_{2}}\  & r_{2}\left( 1 - \alpha_{21}\frac{N_{1}}{K_{2}} \right) \\
+\end{pmatrix}$$
+
+$$J(0,0) = \begin{pmatrix}
+r_{1} & 0 \\
+0\  & r_{2} \\
+\end{pmatrix}$$
+
+$$J\left( K_{1},0 \right) = \begin{pmatrix}
+ - r_{1} & - r_{1}\alpha_{12} \\
+0\  & r_{2}\left( 1 - \alpha_{21}\frac{K_{1}}{K_{2}} \right) \\
+\end{pmatrix}$$
+
+$$J\left( \frac{K_{2}}{\alpha_{21}},\frac{K_{1} - \frac{K_{2}}{\alpha_{21}}}{\alpha_{12}} \right) = \begin{pmatrix}
+ - \frac{r_{1}K_{2}}{\alpha_{21}K_{1}} & - \frac{r_{1}\alpha_{12}K_{2}}{\alpha_{21}K_{1}} \\
+ - r_{2}\left( \frac{a_{21}K_{1} - K_{2}}{\alpha_{12}K_{2}} \right)\  & 0 \\
+\end{pmatrix}$$
+
+$${tr}J = - \frac{r_{1}K_{2}}{\alpha_{21}K_{1}}$$
+
+$$\det J = - r_{2}r_{1}\left( 1 - \frac{K_{2}}{\alpha_{21}K_{1}} \right)$$
+
+In the case where $\alpha_{21} < \frac{K_{2}}{K_{1}}$, the first
+equilibrium is an unstable node while the second equilibrium is an
+unstable saddle. In the case where $\alpha_{21} > \frac{K_{2}}{K_{1}}$,
+the first equilibrium is an unstable node. The second equilibrium is a
+stable node. And the third equilibrium is an unstable saddle node. In
+the case where $\alpha_{21} = \frac{K_{2}}{K_{1}}$, the first
+equilibrium is an unstable node. The second equilibrium is an unstable
+saddle node. And the third equilibrium is an unstable saddle node.
+
+
+## Problem 16.1
+
+The general solution is
+
+$$n(x,t) = e^{- \lambda Dt}(A\sin{\sqrt{\lambda}x} + B\cos{\sqrt{\lambda}x})$$
+
+The homogeneous Neumann boundary condition require that
+
+$$\frac{\partial n}{\partial x}(0,t) = 0$$
+
+$$\frac{\partial n}{\partial x}(L,t) = 0$$
+
+That is to say
+
+$$\frac{\partial n}{\partial x}(x,t) = e^{- \lambda Dt}\sqrt{\lambda}(A\cos{\sqrt{\lambda}x} - B\sin{\sqrt{\lambda}x})$$
+
+$$\frac{\partial n}{\partial x}(0,t) = e^{- \lambda Dt}\sqrt{\lambda}A = 0$$
+
+$$\frac{\partial n}{\partial x}(L,t) = e^{- \lambda Dt}\sqrt{\lambda}\left( A\cos{\sqrt{\lambda}L} - B\sin{\sqrt{\lambda}L} \right) = 0$$
+
+So,
+
+$$A = 0$$
+
+$$\sqrt{\lambda} = \frac{k\pi}{L},k\mathbb{\in N}$$
+
+Therefore, the solution is
+
+$$n(x,t) = \sum_{k = 1}^{\infty}{B_{k}e^{- \frac{k\pi}{L}Dt}\cos{\left( \frac{k\pi}{L} \right)x}}$$
+
+To satisfy the initial conditions,
+
+$$n_{0}(x) = \sum_{k = 1}^{\infty}{B_{k}\cos{\left( \frac{k\pi}{L} \right)x}}$$
+
+By applying Fourier series, we have
+
+$$B_{k} = \frac{2}{L}\int_{0}^{L}{n_{0}(x)\cos\left( \frac{k\pi x}{L} \right)dx}$$
+
+In summary, the solution is
+
+$$n(x,t) = \sum_{k = 1}^{\infty}{\left( \frac{2}{L}\int_{0}^{L}{n_{0}(x)\cos\left( \frac{k\pi x}{L} \right)dx} \right)e^{- \frac{k\pi}{L}Dt}\cos{\left( \frac{k\pi}{L} \right)x}}$$
+
+## Problem 16.2
+
+Set
+
+$$n(x,t) = e^{rt}u(x,t)$$
+
+$$e^{rt}\frac{\partial u}{\partial t} + re^{rt}u = re^{rt}u + De^{rt}\frac{\partial^{2}n}{\partial x^{2}}$$
+
+So we have
+
+$$\frac{\partial u}{\partial t} = D\frac{\partial^{2}n}{\partial x^{2}}$$
+
+Let $u(x,t) = X(x)T(t)$, then
+
+$$X(x)T^{'}(t) = DX^{''}(x)T(t)$$
+
+$$\frac{1}{D}\frac{T^{'}(t)}{T(t)} = \frac{X^{''}(x)}{X(x)} = - \lambda$$
+
+Suppose $\lambda = 0$, then
+
+$$T(t) = C$$
+
+$$X(x) = Ax + B$$
+
+To satisfy the boundary conditions,
+
+$$A = \alpha B$$
+
+$$A = - \alpha(AL + B)$$
+
+By substituting $A = - \alpha B$, we reach
+
+$$\left( 2\alpha + \alpha^{2}L \right)B = 0$$
+
+It must be $A = B = 0$. There is only one trivial solution in this case.
+
+Next, let's suppose $\lambda < 0$, we have
+
+$$T(t) = Ce^{- \lambda Dt}$$
+
+$$X(x) = A\sinh{\sqrt{- \lambda}x} + B\cosh{\sqrt{- \lambda}x}$$
+
+To satisfy the boundary conditions,
+
+$$X'(x) = A\sqrt{- \lambda}\cosh{\sqrt{- \lambda}x} + B\sqrt{- \lambda}\sinh{\sqrt{- \lambda}x}$$
+
+$$A\sqrt{- \lambda} = \alpha B$$
+
+$$A\sqrt{- \lambda}\cosh{\sqrt{- \lambda}L} + B\sqrt{- \lambda}\sinh{\sqrt{- \lambda}L} = - \alpha\left( A\sinh{\sqrt{- \lambda}L} + B\cosh{\sqrt{- \lambda}L} \right)$$
+
+Substitute $A\sqrt{- \lambda} = \alpha B$ into the second equation, we
+have
+
+$$\alpha B\cosh{\sqrt{- \lambda}L} + B\sqrt{- \lambda}\sinh{\sqrt{- \lambda}L} = - \alpha\left( \frac{\alpha B}{\sqrt{- \lambda}}\sinh{\sqrt{- \lambda}L} + B\cosh{\sqrt{- \lambda}L} \right)$$
+
+$$B\left( \left( \frac{\alpha^{2}}{\sqrt{- \lambda}} + \sqrt{- \lambda} \right)\sinh{\sqrt{- \lambda}L} + 2\alpha\cosh{\sqrt{- \lambda}L} \right) = 0$$
+
+It must be $A = B = 0$. There is only one trivial solution in this case.
+
+Last, let's suppose $\lambda > 0$. The general solution is
+
+$$u(x,t) = e^{- \lambda Dt}(A\sin{\sqrt{\lambda}x} + B\cos{\sqrt{\lambda}x})$$
+
+The homogeneous Robin boundary condition require that
+
+$$\frac{\partial n}{\partial x}(0,t) = \alpha n(0,t)$$
+
+$$\frac{\partial n}{\partial x}(L,t) = - \alpha n(L,t)$$
+
+Or equivalently,
+
+$$\frac{\partial u}{\partial x}(0,t) = \alpha u(0,t)$$
+
+$$\frac{\partial u}{\partial x}(L,t) = - \alpha u(L,t)$$
+
+That is to say
+
+$$\frac{\partial u}{\partial x}(x,t) = e^{- \lambda Dt}\sqrt{\lambda}(A\cos{\sqrt{\lambda}x} - B\sin{\sqrt{\lambda}x})$$
+
+$$\frac{\partial u}{\partial x}(0,t) = e^{- \lambda Dt}\sqrt{\lambda}A = \alpha e^{- \lambda Dt}B$$
+
+$$\frac{\partial u}{\partial x}(L,t) = e^{- \lambda Dt}\sqrt{\lambda}\left( A\cos{\sqrt{\lambda}L} - B\sin{\sqrt{\lambda}L} \right) = - \alpha e^{- \lambda Dt}(A\sin{\sqrt{\lambda}L} + B\cos{\sqrt{\lambda}L})$$
+
+So,
+
+$$\sqrt{\lambda}A = \alpha B$$
+
+$$\left( A\sqrt{\lambda} + \alpha B \right)\cos{\sqrt{\lambda}L} + \left( \alpha A - B\sqrt{\lambda} \right)\sin{\sqrt{\lambda}L} = 0$$
+
+This pair of equations can be written as
+
+$$\begin{pmatrix}
+\sqrt{\lambda} & - \alpha \\
+\sqrt{\lambda}\cos{\sqrt{\lambda}L} + \alpha\sin{\sqrt{\lambda}L} & \alpha\cos{\sqrt{\lambda}L} - \sqrt{\lambda}\sin{\sqrt{\lambda}L} \\
+\end{pmatrix}\begin{pmatrix}
+A \\
+B \\
+\end{pmatrix} = \begin{pmatrix}
+0 \\
+0 \\
+\end{pmatrix}$$
+
+It has non-trivial solution only if the determinant of the matrix is
+zero,
+
+$$2\alpha\sqrt{\lambda}\cos{\sqrt{\lambda}L} = \left( \lambda - \alpha^{2} \right)\sin{\sqrt{\lambda}L}$$
+
+Unless $\lambda = \alpha^{2}$ and $\cos{\sqrt{\lambda}L} = 0$, we have
+
+$$\tan{\sqrt{\lambda}L} = \frac{2\alpha\sqrt{\lambda}}{\lambda - \alpha^{2}}$$
+
+The corresponding eigenvalues are the solutions of the above equations.
+For an example see the desmos graph below:
+<https://www.desmos.com/calculator/wh8drxov2y>
+
+<iframe src="https://www.desmos.com/calculator/kdsduhs0zp?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+It can be shown that
+
+$$\frac{n^{2}\pi^{2}}{L^{2}} < \lambda_{n} < \frac{(n + 1)^{2}\pi^{2}}{L^{2}}$$
+
+and
+
+$$\lim_{n \rightarrow \infty}{\lambda_{n} - \frac{n^{2}\pi^{2}}{L^{2}}} = 0$$
+
+The eigenfunctions associated with these eigenvalues are
+
+$$\phi_{n}(x) = \sin{\sqrt{\lambda_{n}}x} + \frac{\sqrt{\lambda_{n}}}{\alpha}\cos{\sqrt{\lambda_{n}}x}$$
+
+$$= \sin\left( \sqrt{\lambda_{n}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{n}}}{\alpha} \right) \right)$$
+
+we can check that
+
+$$\int_{0}^{L}{\phi_{n}(x)\phi_{m}(x)dx}$$
+
+$$= \int_{0}^{L}{\sin\left( \sqrt{\lambda_{n}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{n}}}{\alpha} \right) \right)\sin\left( \sqrt{\lambda_{m}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{m}}}{\alpha} \right) \right)dx}$$
+
+$$= \frac{1}{2}\int_{0}^{L}{\left( \cos\left( \sqrt{\lambda_{n}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{n}}}{\alpha} \right) - \sqrt{\lambda_{m}}x - \tan^{- 1}\left( \frac{\sqrt{\lambda_{m}}}{\alpha} \right) \right) - \cos\left( \sqrt{\lambda_{n}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{n}}}{\alpha} \right) + \sqrt{\lambda_{m}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{m}}}{\alpha} \right) \right) \right)dx}$$
+
+Using the following fact,
+
+$$\tan^{- 1}\left( \frac{2\alpha{\sqrt{\lambda}}_{n}}{\lambda_{n} - \alpha^{2}} \right) + \tan^{- 1}\left( \frac{\sqrt{\lambda_{n}}}{\alpha} \right)$$
+
+$$= \tan^{- 1}\left( \frac{\frac{2\alpha{\sqrt{\lambda}}_{n}}{\lambda_{n} - \alpha^{2}} + \frac{\sqrt{\lambda_{n}}}{\alpha}}{1 - \frac{2\alpha{\sqrt{\lambda}}_{n}}{\lambda_{n} - \alpha^{2}}\frac{\sqrt{\lambda_{n}}}{\alpha}} \right)$$
+
+$$= \tan^{- 1}\left( - \frac{{\sqrt{\lambda}}_{n}}{\alpha} \right)$$
+
+$$= - \tan^{- 1}\left( \frac{{\sqrt{\lambda}}_{n}}{\alpha} \right)$$
+
+We conclude that
+
+$$\int_{0}^{L}{\phi_{n}(x)\phi_{m}(x)dx} = \left\{ \begin{array}{r}
+0,\ n \neq m \\
+\frac{L}{2},n = m \\
+\end{array} \right.\ $$
+
+Therefore, the solution is
+
+$$u(x,t) = \sum_{n = 0}^{\infty}{B_{n}e^{- \lambda_{n}Dt}\phi_{n}(x)}$$
+
+$$n(x,t) = e^{rt}\sum_{n = 0}^{\infty}{B_{n}e^{- \lambda_{n}Dt}\phi_{n}(x)}$$
+
+To satisfy the initial conditions,
+
+$$n_{0}(x) = \sum_{n = 0}^{\infty}{B_{n}\phi_{n}(x)}$$
+
+By applying Fourier series, we have
+
+$$B_{n} = \frac{2}{L}\int_{0}^{L}{n_{0}(x)\phi_{n}(x)dx}$$
+
+In summary, the solution is
+
+$$n(x,t) = e^{rt}\sum_{k = 0}^{\infty}{\left( \frac{2}{L}\int_{0}^{L}{n_{0}(x)\phi_{n}(x)dx} \right)e^{- \lambda_{n}Dt}\phi_{n}(x)}$$
+
+In the case $\alpha \rightarrow 0$, we have
+
+$$\lim_{\alpha \rightarrow 0}{\phi_{n}(x)} = \lim_{\alpha \rightarrow 0}{\sin\left( \sqrt{\lambda_{n}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{n}}}{\alpha} \right) \right)} = \sin\left( \sqrt{\lambda_{n}}x + \frac{\pi}{2} \right) = - \cos{\sqrt{\lambda_{n}}x}$$
+
+We recover the eigenfunctions for Neuman boundary conditions from
+Problem 16.1.
+
+In the case $\alpha \rightarrow \infty$, we have
+
+$$\lim_{\alpha \rightarrow 0}{\phi_{n}(x)} = \lim_{\alpha \rightarrow 0}{\sin\left( \sqrt{\lambda_{n}}x + \tan^{- 1}\left( \frac{\sqrt{\lambda_{n}}}{\alpha} \right) \right)} = \sin\left( \sqrt{\lambda_{n}}x \right)$$
+
+We recover the eigenfunctions for Dirichlet boundary conditions from the
+textbook.
+
+## Problem 16.3
+
+Let $n(r,t) = e^{\alpha_{0}t}u(r,t)$ and substitute into $(16.100)$,
+
+$$\alpha_{0}e^{\alpha_{0}t}u + e^{\alpha_{0}t}\frac{\partial u}{\partial t} = \alpha_{0}\left( 1 - \frac{r^{2}}{R^{2}} \right)e^{\alpha_{0}t}u + D\frac{1}{r}\frac{\partial}{\partial r}\left( re^{\alpha_{0}t}\frac{\partial u}{\partial r} \right)$$
+
+$$\frac{\partial u}{\partial t} = - \alpha_{0}\left( \frac{r}{R} \right)^{2}u + D\frac{1}{r}\frac{\partial}{\partial r}\left( r\frac{\partial u}{\partial r} \right)$$
+
+Let $u(r,t) = S(r)T(t)$ and substitute into the above equation,
+
+$$S(r)T^{'}(t) = - \alpha_{0}\left( \frac{r}{R} \right)^{2}S(r)T(t) + D\frac{1}{r}\frac{d}{dr}\left( rS^{'}(r)T(t) \right)$$
+
+$$S(r)T^{'}(t) = - \alpha_{0}\left( \frac{r}{R} \right)^{2}S(r)T(t) + DT(t)\frac{1}{r}\frac{d}{dr}\left( rS^{'}(r) \right)$$
+
+$$\frac{1}{D}\frac{T^{'}(t)}{T(t)} = - \frac{\alpha_{0}}{D}\left( \frac{r}{R} \right)^{2} + \frac{1}{rS(r)}\frac{d}{dr}\left( rS^{'}(r) \right)$$
+
+Assume that
+
+$$- \lambda = \frac{1}{D}\frac{T^{'}(t)}{T(t)} = - \frac{\alpha_{0}}{D}\left( \frac{r}{R} \right)^{2} + \frac{1}{rS(r)}\frac{d}{dr}\left( r\frac{dS}{dr} \right)$$
+
+Then
+
+$$T^{'} = - \lambda DT$$
+
+$$\frac{d}{dr}\left( r\frac{dS}{dr} \right) + \left( \lambda - \frac{\alpha_{0}}{D}\left( \frac{r}{R} \right)^{2} \right)rS = 0$$
+
+The second equation maybe re-written as
+
+$$r\frac{d^{2}S}{dr^{2}} + \frac{dS}{dr} + \left( \lambda - \frac{\alpha_{0}}{D}\left( \frac{r}{R} \right)^{2} \right)rS = 0$$
+
+Denote $b = \left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}$ and
+$\mu = \frac{\lambda}{4b}$. The above equation is transformed into
+
+$$r\frac{d^{2}S}{dr^{2}} + \frac{dS}{dr} + \left( 4b\mu - b^{2}r^{2} \right)rS = 0$$
+
+Use substitution $x = br^{2}$, we have
+
+$$\frac{dS}{dr} = \frac{dx}{dr}\frac{dS}{dx} = 2br\frac{dS}{dx}$$
+
+$$\frac{d^{2}S}{dr^{2}} = \frac{dx}{dr}\frac{d}{dx}\ \left( \frac{dS}{dr} \right) = 2br\frac{d}{dx}\ \left( 2br\frac{dS}{dx} \right) = 4b^{2}r^{2}\frac{d^{2}S}{dx^{2}} + 2b\frac{dS}{dx}$$
+
+After substituting all these into the ODE, we have
+
+$$r\left( 4b^{2}r^{2}\frac{d^{2}S}{dx^{2}} + 2b\frac{dS}{dx} \right) + 2br\frac{dS}{dx} + \left( 4b\mu - b^{2}r^{2} \right)rS = 0$$
+
+$$x\frac{d^{2}S}{dx^{2}} + \frac{dS}{dx} + \left( \mu - \frac{1}{4}x \right)S = 0$$
+
+Finally, let $S(x) = e^{- \frac{x}{2}}U(x)$,
+
+$$x\frac{d^{2}}{dx^{2}}\left( e^{- \frac{x}{2}}U(x) \right) + \frac{d}{dx}\left( e^{- \frac{x}{2}}U(x) \right) + \left( \mu - \frac{1}{4}x \right)e^{- \frac{x}{2}}U(x) = 0$$
+
+$$x\left( \frac{1}{4}e^{- \frac{x}{2}}U(x) - e^{- \frac{x}{2}}\frac{dU}{dx} + e^{- \frac{x}{2}}\frac{d^{2}U}{dx^{2}} \right) - \frac{1}{2}e^{- \frac{x}{2}}U(x) + e^{- \frac{x}{2}}\frac{dU}{dx} + \left( \mu - \frac{1}{4}x \right)e^{- \frac{x}{2}}U = 0$$
+
+$$x\frac{d^{2}U}{dx^{2}} + (1 - x)\frac{dU}{dx} + \left( \mu - \frac{1}{2} \right)U = 0$$
+
+This is exactly the Laguerre differential equation. Thus, the
+eigenvalues are
+
+$$\mu_{n} - \frac{1}{2} = \frac{\lambda_{n}}{4\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}} - \frac{1}{2} = n$$
+
+The eigenfunctions are Laguerre polynomials,
+
+$$U_{n}(x) = L_{n}(x) = \frac{1}{n!}\left( \frac{d}{dx} - 1 \right)^{n}x^{n}$$
+
+$$S_{n}(r) = e^{- \frac{\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}r^{2}}{2}}U\left( \left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}r^{2} \right) = e^{- \frac{\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}r^{2}}{2}}\frac{\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{n}{2}}}{n!}\left( \frac{1}{2\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}r}\frac{d}{dr} - 1 \right)^{n}r^{2n}$$
+
+The general solution to $(16.100)$ is
+
+$$n(r,t) = e^{\alpha_{0}t}u(r,t)$$
+
+$$= e^{\alpha_{0}t}\sum_{n = 0}^{\infty}{e^{- 4\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}\left( n + \frac{1}{2} \right)Dt}e^{- \frac{\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}r^{2}}{2}}\frac{\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{n}{2}}}{n!}\left( \frac{1}{2\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}r}\frac{d}{dr} - 1 \right)^{n}r^{2n}}$$
+
+The critical patch size is
+
+$$\alpha_{0} - 4\left( \frac{\alpha_{0}}{DR^{2}} \right)^{\frac{1}{2}}\frac{1}{2}D > 0$$
+
+$$R > 2\sqrt{\frac{D}{\alpha_{0}}}$$
+
+This solution is inspired by
+<https://math.stackexchange.com/questions/4680101/parabolic-fall-off-growth-rate-in-polar-coordinate-pde-by-separation-of-variable/4680673#4680673>
+
+## Problem 17.1
+
+For $x < 0$, find the steady state
+
+$$- u(1 - u) + u'' = 0$$
+
+$$- u(1 - u)u' + u''u' = 0$$
+
+$$- \frac{u^{2}}{2} + \frac{u^{3}}{3} + \frac{1}{2}\left( u^{'} \right)^{2} = 0$$
+
+$$- \frac{u^{2}}{2} + \frac{u^{3}}{3} + \frac{1}{2}v^{2} = 0$$
+
+The phase portrait is a reflection over $v$ axis of Fig $17.1$. For
+$x > 0$, we are looking for a solution that starts from
+$u\left( 0^{+} \right),v(0^{+})$ to $u(\infty) = 1,v(\infty) = 0$. For
+$x < 0$, we are looking for a solution that starts from
+$u\left( 0^{-} \right),v(0^{-})$ to $u( - \infty) = 0,v( - \infty) = 0$.
+This occurs along the following two curves,
+
+$$\frac{u^{2}}{2} - \frac{u^{3}}{3} + \frac{1}{2}v^{2} = \frac{1}{6}$$
+
+$$- \frac{u^{2}}{2} + \frac{u^{3}}{3} + \frac{1}{2}v^{2} = 0$$
+
+The intersection of these two curves are
+
+$$u\left( 0^{+} \right) = u\left( 0^{-} \right) = 0.5$$
+
+$$v\left( 0^{+} \right) = v\left( 0^{-} \right) \approx 0.408$$
+
+See the following desmos diagram for details,
+<https://www.desmos.com/calculator/baugbxefgv>
+
+<iframe src="https://www.desmos.com/calculator/yu65al26dr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+The solution of $u(x)$ can be numerically calculated by MATLAB with code
+attached.
+
+<iframe src="https://www.desmos.com/calculator/ha0rqoifjc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+~~~
+function dudx = slog(x,u,sign)
+
+dudx = [u(2); sign*u(1)*(1-u(1))];
+
+end
+
+opts = odeset('RelTol',1e-7,'AbsTol',1e-7);
+
+sign = -1;
+
+[x_r, u_r] = ode45(@(x,u) slog(x,u,sign),[0 10],[0.5;
+0.40824825],opts);
+
+sign = 1;
+
+[x_l, u_l] = ode45(@(x,u) slog(x,u,sign),[0 -10],[0.5;
+0.40824825],opts);
+
+x = [x_l(end:-1:2);x_r];
+
+u = [u_l(end:-1:2,:);u_r];
+
+plot(x,u(:,1),'-o',x,u(:,2),'-o');
+
+title('Steady State of Problem 17.1');
+
+xlabel('x');
+
+ylabel('u or v');
+
+legend('u','v');
+~~~
+
+## Problem 18.1
+
+Let $z = x - ct$, then the reaction-diffusion model is reduced to
+
+$$- c\frac{\partial n}{\partial z} = f(n) + \frac{\partial^{2}n}{\partial z^{2}}$$
+
+Assume $0 \leq n \leq \frac{1}{2}$
+
+$$\frac{d^{2}n}{dz^{2}} - c\frac{dn}{dz} = n$$
+
+$$n_{+}(z) = Ae^{\frac{c - \sqrt{c^{2} + 4}}{2}z}$$
+
+Since the travelling wave is not affected by shift in $z$, we may assume
+that $n(0) = \frac{1}{2}$
+
+$$n_{+}(z) = \frac{1}{2}e^{\frac{c - \sqrt{c^{2} + 4}}{2}z},z \geq 0$$
+
+Assume $\frac{1}{2} \leq n \leq 1$
+
+$$\frac{d^{2}n}{dz^{2}} - c\frac{dn}{dz} = 1 - n$$
+
+$$n_{-}(z) = 1 + Be^{\frac{c + \sqrt{c^{2} - 4}}{2}z} + Ce^{\frac{c - \sqrt{c^{2} - 4}}{2}z}$$
+
+To satisfy $n(0) = \frac{1}{2}$,
+
+$$n_{-}(z) = 1 + Be^{\frac{c + \sqrt{c^{2} - 4}}{2}z} + \left( - \frac{1}{2} - B \right)e^{\frac{c - \sqrt{c^{2} - 4}}{2}z}$$
+
+To make the function differentiable at $z = 0$, we let
+
+$$n_{+}^{'}(0) = \ n_{-}^{'}(0)$$
+
+$$\frac{c - \sqrt{c^{2} + 4}}{4}e^{\frac{c - \sqrt{c^{2} + 4}}{2}z} = B\frac{c + \sqrt{c^{2} - 4}}{2}e^{\frac{c + \sqrt{c^{2} - 4}}{2}z} - \left( \frac{1}{2} + B \right)\frac{c - \sqrt{c^{2} - 4}}{2}e^{\frac{c - \sqrt{c^{2} - 4}}{2}z}$$
+
+$$c - \sqrt{c^{2} + 4} = 2B\left( c + \sqrt{c^{2} - 4} \right) - (1 + 2B)\left( c - \sqrt{c^{2} - 4} \right)$$
+
+$$B = \frac{2c - \sqrt{c^{2} - 4} - \sqrt{c^{2} + 4}}{4\sqrt{c^{2} - 4}},c \neq 2$$
+
+$$n_{+}^{''}(0) = \ n_{-}^{''}(0)$$
+
+$$\frac{1}{2}\left( \frac{c - \sqrt{c^{2} + 4}}{2} \right)^{2} = B\left( \frac{c + \sqrt{c^{2} - 4}}{2} \right)^{2} - \left( \frac{1}{2} + B \right)\left( \frac{c - \sqrt{c^{2} - 4}}{2} \right)^{2}$$
+
+$$c^{2} + 2 - c\sqrt{c^{2} + 4} = 2B\left( c^{2} - 2 + c\sqrt{c^{2} - 4} \right) - (1 + 2B)\left( c^{2} - 2 - c\sqrt{c^{2} - 4} \right)$$
+
+$$B = \frac{2c - \sqrt{c^{2} - 4} - \sqrt{c^{2} + 4}}{4\sqrt{c^{2} - 4}},c \neq 2$$
+
+Therefore, provided $c \neq 2$, the travelling wave solution is
+
+$$n(z) = \left\{ \begin{array}{r}
+\frac{1}{2}e^{\frac{c - \sqrt{c^{2} + 4}}{2}z},z \geq 0 \\
+1 + Be^{\frac{c + \sqrt{c^{2} - 4}}{2}z} + \left( - \frac{1}{2} - B \right)e^{\frac{c - \sqrt{c^{2} - 4}}{2}z},z < 0 \\
+\end{array} \right.\ $$
+
+where
+
+$$B = \frac{2c - \sqrt{c^{2} - 4} - \sqrt{c^{2} + 4}}{4\sqrt{c^{2} - 4}}$$
+
+## Problem 18.2
+
+$$\frac{\partial u}{\partial t} = D\frac{\partial^{2}u}{\partial x^{2}}$$
+
+with boundary condition $u(x,0) = n_{0}\delta(x)$,
+$\lim_{x \rightarrow \pm \infty}{u(x,t)} = 0$.
+
+Let $u = \epsilon^{c}U,t = \epsilon^{b}T,x = \epsilon^{a}X$, we have
+
+$$\epsilon^{c - b}\frac{\partial U}{\partial T} = \epsilon^{c - 2a}D\frac{\partial^{2}U}{\partial X^{2}}$$
+
+For the heat equation to be invariant,
+
+$$b = 2a$$
+
+So let $z = \frac{x}{t^{\frac{1}{2}}},u = t^{\frac{c}{b}}v(z)$, then
+
+$$\frac{\partial u(x,t)}{\partial t} = \frac{\partial u}{\partial t} + \frac{\partial z}{\partial t}\frac{\partial u}{\partial z} = \frac{c}{b}t^{\frac{c}{b} - 1}v - \frac{1}{2}xt^{\frac{c}{b} - \frac{3}{2}}v^{'} = \frac{c}{b}t^{\frac{c}{b} - 1}v - \frac{1}{2}zt^{\frac{c}{b} - 1}v^{'}$$
+
+$$\frac{\partial u}{\partial x} = \frac{\partial z}{\partial x}\frac{\partial u}{\partial z} = \frac{1}{t^{\frac{1}{2}}}t^{\frac{c}{b}}\frac{dv}{dz} = t^{\frac{c}{b} - \frac{1}{2}}\frac{dv}{dz}$$
+
+$$\frac{\partial^{2}u}{\partial x^{2}} = \frac{\partial z}{\partial x}\frac{\partial}{\partial z}\left( t^{\frac{c}{b} - \frac{1}{2}}\frac{dv}{dz} \right) = t^{\frac{c}{b} - 1}\frac{d^{2}v}{dz^{2}}$$
+
+Therefore,
+
+$$Dt^{\frac{c}{b} - 1}v^{''} + \frac{1}{2}zt^{\frac{c}{b} - 1}v^{'} - \frac{c}{b}t^{\frac{c}{b} - 1}v = 0$$
+
+To be convenient, choose $c = 0$
+
+$$Dv^{''} + \frac{1}{2}zv^{'} = 0$$
+
+$$v^{'} = Ae^{- \frac{1}{4D}z^{2}}$$
+
+Therefore,
+
+$$v = A\int_{- \infty}^{z}{e^{- \frac{1}{4D}s^{2}}ds} + B$$
+
+$$u(z) = A\int_{- \infty}^{z}{e^{- \frac{1}{4D}t^{2}}dt} + B$$
+
+To satisfy the boundary conditions,
+
+## Problem 20.1
+
+Assume $a_{1}$ for the age group $25 - 29$ and $a_{2}$ for the age group
+$50 - 54$. By $(20.29)$, we have
+
+$$\frac{c^{*}\left( a_{1} \right)}{c^{*}(0)} = e^{- r^{*}a_{1}}l\left( a_{1} \right)$$
+
+$$\frac{c^{*}\left( a_{2} \right)}{c^{*}(0)} = e^{- r^{*}a_{2}}l\left( a_{2} \right)$$
+
+Divide these two equations, *\
+*$$\frac{c^{*}\left( a_{1} \right)}{c^{*}(a_{2})} = e^{- r^{*}(a_{1} - a_{2})}\frac{l(a_{1})}{l(a_{2})}$$
+
+$$\frac{1314}{538} = e^{25r^{*}}\frac{408}{351}$$
+
+$$r^{*} = \frac{1}{25}\ln\frac{1314 \times 351}{538 \times 408}$$
