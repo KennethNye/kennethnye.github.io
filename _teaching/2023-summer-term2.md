@@ -22,7 +22,7 @@ Solutions to the in-class tests and final exam are posted here.
 
 [Download test#5 here](http://kennethnye.github.io/files/312T5probsS2023.pdf)
 
-[Download test#5 here](http://kennethnye.github.io/files/math312_final_exam.pdf)
+[Download final exam here](http://kennethnye.github.io/files/math312_final_exam.pdf)
 
 ## Solutions
 
@@ -36,4 +36,4 @@ Solutions to the in-class tests and final exam are posted here.
 
 [Download test#5 solutions here](http://kennethnye.github.io/files/math312_test5_sols.pdf)
 
-[Download test#5 solutions here](http://kennethnye.github.io/files/math312_final_solution.pdf)
+[Download final exam solutions here](http://kennethnye.github.io/files/math312_final_solution.pdf)
