@@ -16,4 +16,4 @@ Solutions to the midterms are posted here.
 
 ## Solutions
 
-[Download test#1 solutions here](http://kennethnye.github.io/files/Math322_midterm0_sols.pdf)
+[Download midterm#0 solutions here](http://kennethnye.github.io/files/Math322_midterm0_sols.pdf)
