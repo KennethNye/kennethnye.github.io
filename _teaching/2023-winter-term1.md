@@ -1,5 +1,5 @@
 ---
-title: "Math322 Introduction to Group Theorey"
+title: "Math322 Introduction to Group Theory"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2023-winter-term1

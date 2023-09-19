@@ -1,5 +1,5 @@
 ---
-title: "Math312 Introduction to Number Theorey"
+title: "Math312 Introduction to Number Theory"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2023-summer-term2
