@@ -14,10 +14,10 @@ Solutions to the midterms are posted here.
 
 [Download midterm#0 here](http://kennethnye.github.io/files/Math322_midterm0.pdf)
 
-[Download midterm#0 here](http://kennethnye.github.io/files/Math322_midterm1.pdf)
+[Download midterm#1 here](http://kennethnye.github.io/files/Math322_midterm1.pdf)
 
 ## Solutions
 
 [Download midterm#0 solutions here](http://kennethnye.github.io/files/Math322_midterm0_sols.pdf)
 
-[Download midterm#0 solutions here](http://kennethnye.github.io/files/Math322_midterm1_sols.pdf)
+[Download midterm#1 solutions here](http://kennethnye.github.io/files/Math322_midterm1_sols.pdf)
