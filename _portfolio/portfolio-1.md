@@ -1,52 +1,7 @@
 ---
-title: "Solving a Feymann-Kac PDE"
+title: "Portfolio item number 1"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
-Solving the following PDE
-
-$$
-\frac{\partial F}{\partial t}(t,x)+\kappa(\theta-x)\frac{\partial F}{\partial x}(t,x)+\frac{1}{2}\sigma^2\frac{\partial^2 F}{\partial x^2}(t,x)-rF=0
-$$
-
-$$
-F(T,x)=xe^{\kappa T}
-$$
-
-We calculate the expection of discounted $F(T,X_T)$ conditioned on $X_t=x$
-
-$$
-\begin{aligned}
-&F(t,x)\\
-&=\mathbb{E}\left(\left.\int_t^Te^{-r}F(T,X_T)d\tau \right| X_t=x\right)\\
-&=e^{-r(T-t)}\mathbb{E}\left(\left.X_Te^{\kappa T}\right| X_t=x\right)\\
-&=e^{-r(T-t)+\kappa T}\mathbb{E}\left(\left.X_T\right| X_t=x\right)\\
-\end{aligned}
-$$
-
-So it boils down to calculate the expectation of $X_T$ conditioned on $X_t=x$.
-
-Take
-
-$$
-dX_t=\kappa(\theta-X_t)dt+\sigma dW_t
-$$
-
-The above is in the form of an [Ornstein–Uhlenbeck process](https://planetmath.org/analyticsolutiontoornsteinuhlenbecksde). Thus, the solution is
-
-$$
-X_T=\theta + e^{-\kappa (T-t)}(X_t-\theta)+\sigma\int_t^Te^{-\kappa(T-\tau)}dW_{\tau}
-$$
-
-So the expectation is
-
-$$
-\mathbb{E}\left(\left.X_T\right| X_t=x\right)=\theta +e^{-\kappa(T-t)(x-\theta)}
-$$
-
-And finally
-
-$$
-F(t,x)=e^{-r(T-t)+\kappa T}\left(\theta +e^{-\kappa(T-t)(x-\theta)}\right)
-$$
+This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML.
