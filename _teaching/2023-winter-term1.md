@@ -16,8 +16,12 @@ Solutions to the midterms are posted here.
 
 [Download midterm#1 here](http://kennethnye.github.io/files/Math322_midterm1.pdf)
 
+[Download midterm#2 here](http://kennethnye.github.io/files/Math322_midterm2.pdf)
+
 ## Solutions
 
 [Download midterm#0 solutions here](http://kennethnye.github.io/files/Math322_midterm0_sols.pdf)
 
 [Download midterm#1 solutions here](http://kennethnye.github.io/files/Math322_midterm1_sols.pdf)
+
+[Download midterm#2 solutions here](http://kennethnye.github.io/files/Math322_midterm2_sols.pdf)
